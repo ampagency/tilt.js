@@ -114,6 +114,8 @@
         const deviceMotionHandler = function(event) {
             var accX = Math.round(event.accelerationIncludingGravity.x * 10) / 10;
             var accY = Math.round(event.accelerationIncludingGravity.y * 10) / 10;
+            var newX = (accX / 10);
+            var newY = (accY / 10);
 
             const oldX = this.phonePositions.x;
             const oldY = this.phonePositions.y;
