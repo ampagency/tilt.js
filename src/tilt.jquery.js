@@ -171,8 +171,13 @@
             }
             else {
                 maxTilt = this.settings.maxTilt;
-                percentageX = (this.mousePositions.x - left) / width;
-                percentageY = (this.mousePositions.y - top) / height;
+                if( this.mousePositions ) {
+                    percentageX = (this.mousePositions.x - left) / width;
+                    percentageY = (this.mousePositions.y - top) / height;
+                } else {
+                    percentageX = 0;
+                    percentageY = 0;
+                }
             }
 
             //tilt
